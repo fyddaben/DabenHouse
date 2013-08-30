@@ -430,27 +430,148 @@ body .page .article .inner .text ul {
 body .page .article .inner .text ul li {
   margin: 2px 0;
 }
-body .page .article .inner .text pre {
+/*
+  javascirpt css
+*/
+body .page .article .inner .text .lang-javascript{
   font-family: Monaco, Andale Mono, Courier New, monospace;
   overflow-x: auto;
+  display: block;
   margin: 10px;
   padding: 12px;
   border: 1px solid #CDCDCD;
   border-radius: 3px;
-  background: white;
   box-shadow: 0 1px 0 #ffffff, 0 1px 3px rgba(0, 0, 0, 0.1) inset;
-  color: black;
+  color: #fff;
   white-space: pre;
   word-wrap: normal;
   font: 12px/1.5 Monaco, monospace;
+  background-color: #fff;
+  background: #1c1e20;
+  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
+  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background-color: #2b2b2b;
 }
-body .page .article .inner .text pre code {
+body .page .article .inner .text .lang-javascript pre {
   text-shadow: none;
   font-size: 14px;
   margin: 0px;
   padding: 0px;
   background: transparent;
   vertical-align: baseline;
+}
+body .page .article .inner .text .lang-javascript pre .kd{
+  color: #ff2c2d;
+}
+
+
+body .page .article .inner .text .lang-javascript pre .nx{
+  color:#8add6d;
+}
+
+/*
+  style css
+*/
+body .page .article .inner .text .lang-css{
+  font-family: Monaco, Andale Mono, Courier New, monospace;
+  overflow-x: auto;
+  display: block;
+  margin: 10px;
+  padding: 12px;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #ffffff, 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  color: #fff;
+  white-space: pre;
+  word-wrap: normal;
+  font: 12px/1.5 Monaco, monospace;
+  background-color: #fff;
+  background: #1c1e20;
+  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
+  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background-color: #2b2b2b;
+}
+body .page .article .inner .text .lang-css pre {
+  text-shadow: none;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  vertical-align: baseline;
+}
+body .page .article .inner .text .lang-css pre .nt{
+  color: #fa2a72;
+}
+body .page .article .inner .text .lang-css pre .nc{
+  color:#17ff2e;
+  
+}
+body .page .article .inner .text .lang-css pre .k{
+  color:#61d9ef;
+}
+body .page .article .inner .text .lang-css pre .n{
+  color:#61d9ef;
+}
+body .page .article .inner .text .lang-css pre .m{
+  color:#af82ff;
+}
+
+body .page .article .inner .text .lang-css pre .nb{
+  color:#61d9ef;
+}
+
+/*
+  html css
+*/
+body .page .article .inner .text .lang-html{
+  font-family: Monaco, Andale Mono, Courier New, monospace;
+  overflow-x: auto;
+  display: block;
+  margin: 10px;
+  padding: 12px;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #ffffff, 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  color: #fff;
+  white-space: pre;
+  word-wrap: normal;
+  font: 12px/1.5 Monaco, monospace;
+  background-color: #fff;
+  background: #1c1e20;
+  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
+  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background-color: #2b2b2b;
+}
+body .page .article .inner .text .lang-html pre {
+  text-shadow: none;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  vertical-align: baseline;
+}
+body .page .article .inner .text .lang-html pre .nt{
+  color: #fa2a72;
+}
+
+
+body .page .article .inner .text .lang-html pre .na{
+  color:#17ff2e;
+}
+body .page .article .inner .text .lang-html pre .s{
+  color:#fce61e;
 }
 body .page .article .inner .text blockquote {
   margin-bottom: 18px;
