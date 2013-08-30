@@ -170,6 +170,7 @@ exports.articleAdd=function(req,res){
 
 	var Concallback=function(ok,str){
 		contents=str;
+
 		var callback=function(id){
 			var sql={
 				art_id:id,
@@ -259,26 +260,48 @@ exports.articleUpdate=function(req,res){
  		tags.push(tag);
  	}
 	var artid=req.body.artid;
-	var contents=markdown.toHTML(content);	
-	var id={
-		art_id:artid
+	
+	var Concallback=function(ok,str){
+		contents=str;
+		var id={
+			art_id:artid
+		};
+		var obj={
+			art_id:artid,
+			title:title,
+			ycon:content,
+			content:contents,
+			createTime:Cons.currentDate(),
+			author:Cons.author,
+			tags:tags
+		};
+
+		Articles.update(id,{$set:obj},function(err,article){
+
+			if(err) console.log(err);
+			res.send("修改成功");
+
+		});
 	};
-	var obj={
-		art_id:artid,
-		title:title,
-		ycon:content,
-		content:contents,
-		createTime:Cons.currentDate(),
-		author:Cons.author,
-		tags:tags
+	var options={
+	  gfm: true,
+	  highlight: function (code, lang, callback) {
+	    pygmentize({ lang: lang, format: 'html' }, code, function (err, result) {
+	      if (err) return callback(err);
+	      callback(null,result.toString());
+	    });
+	  },
+	  tables: true,
+	  breaks: false,
+	  pedantic: false,
+	  sanitize: true,
+	  smartLists: true,
+	  smartypants: false,
+	  langPrefix: 'lang-'
 	};
 
-	Articles.update(id,{$set:obj},function(err,article){
-
-		if(err) console.log(err);
-		res.send("修改成功");
-
-	});
+	marked(content,options,Concallback);
+	
 
 	
 }
