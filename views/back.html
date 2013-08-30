@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>JqmTest</title>
+    <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="http://page.zgenk.com/130819/css/uploadify.css">
+    <!-- build:css({.tmp, app}) css/app.css -->
+    <link rel="stylesheet" href="http://page.zgenk.com/130819/css/blog_back.css">
+    <!-- endbuild -->
+    </head>
+  <body>
+    <form method="post" action="/back/article">
+    	<dl class="page">
+    		<h1 class="title">
+    		   文章后台
+    		</h1>
+    		<dt>
+    			文章标题:
+    		</dt>
+    		<dd>
+    			<input type="text" name="title"/>
+    		</dd>
+    		<br>
+    		<dt>
+    			文章内容:
+    		</dt>
+    		<dd>
+    			<textarea name="content"></textarea>
+    		</dd>
+    		<br>
+    		<dt>
+    			文章标签<br>(用逗号分隔):
+    		</dt>
+    		<dd>
+    		 	<input type="text" name="tags"/>
+    		</dd>
+    		<br>
+    		<dt>
+    			图片上传:
+    		</dt>
+    		<dd>
+    		 	<input type="file" class="file" name="file_upload" id="file_upload" />
+    		  
+        </dd>
+        <br>
+        <dt></dt>
+        <dd>
+          <input type="submit" value="提交"/>
+        </dd>
+        <br>
+        <dt></dt>
+        <dd id="imglog">
+        </dd>
+    	</dl>
+    </form>
+     <script type="text/javascript" src="http://page.zgenk.com/130819/js/jquery18.js"></script>
+     <script type="text/javascript" src="http://page.zgenk.com/130819/js/jquery.uploadify.min.js"></script>
+    <script type="text/javascript" src="/javascripts/blog_back.js"></script>
+  </body>
+  </html>

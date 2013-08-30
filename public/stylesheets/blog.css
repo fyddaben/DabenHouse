@@ -1,0 +1,569 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #A0410D;
+  text-decoration: none;
+}
+/* 鏈闂殑閾炬帴 */
+/* 宸茶闂殑閾炬帴 */
+body {
+  overflow: auto;
+  background: #fff;
+  background: transparent url("http://page.zgenk.com/130819/images/body_bg.png") repeat fixed;
+  color: #494949;
+  font: 14px 'Helvetica Neue', Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+  line-height: 1;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.hide{
+  display: none;
+}
+/*
+点击下一页，往左滑动的效果
+*/
+@keyframes lastpage
+{
+ from {
+     margin-left:0;
+  }
+  to {
+    margin-left: -100%;
+  }
+}
+lastpage
+@-moz-keyframes lastpage /* Firefox */
+{
+ from {
+     margin-left:0;
+  }
+  to {
+    margin-left: -100%;
+  }
+}
+
+@-webkit-keyframes lastpage /* Safari 和 Chrome */
+{
+  from {
+     margin-left:0;
+  }
+  to {
+    margin-left: -100%;
+  }
+}
+
+@-o-keyframes lastpage /* Opera */
+{
+ from {
+     margin-left:0;
+  }
+  to {
+    margin-left: -100%;
+  }
+}
+
+
+
+@keyframes nextpage
+{
+from {
+    margin-left: 100%;
+
+  }
+  to {
+    margin-left:0;
+  }
+}
+
+@-moz-keyframes nextpage /* Firefox */
+{
+from {
+    margin-left: 100%;
+
+  }
+  to {
+    margin-left:0;
+  }
+}
+
+@-webkit-keyframes nextpage /* Safari 和 Chrome */
+{
+from {
+    margin-left: 100%;
+
+  }
+  to {
+    margin-left:0;
+  }
+}
+
+@-o-keyframes nextpage /* Opera */
+{
+from {
+    margin-left: 100%;
+
+  }
+  to {
+    margin-left:0;
+  }
+}
+
+.lastpage{
+
+  animation: lastpage 2s;
+  -moz-animation: lastpage 2s; /* Firefox */
+  -webkit-animation: lastpage 2s;  /* Safari 和 Chrome */
+  -o-animation: lastpage 2s; /* Opera */
+}
+.nextpage{
+ 
+  animation: nextpage 2s;
+  -moz-animation: nextpage 2s; /* Firefox */
+  -webkit-animation: nextpage 2s;  /* Safari 和 Chrome */
+  -o-animation: nextpage 2s; /* Opera */
+}
+/*
+ 点击上一页，往右滑动的效果
+*/
+@keyframes lastpage2
+{
+  from {
+     margin-left:-100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@-moz-keyframes lastpage2 /* Firefox */
+{
+  from {
+     margin-left:-100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes lastpage2 /* Safari 和 Chrome */
+{
+  from {
+     margin-left:-100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@-o-keyframes lastpage2 /* Opera */
+{
+  from {
+     margin-left:-100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes nextpage2
+{
+
+  from {
+    margin-left: 0;
+
+  }
+  to {
+    margin-left:100%;
+  }
+}
+
+@-moz-keyframes nextpage2 /* Firefox */
+{
+
+  from {
+    margin-left: 0;
+
+  }
+  to {
+    margin-left:100%;
+  }
+}
+
+@-webkit-keyframes nextpage2 /* Safari 和 Chrome */
+{
+  from {
+    margin-left: 0;
+
+  }
+  to {
+    margin-left:100%;
+  }
+}
+@-o-keyframes nextpage2 /* Opera */
+{
+  from {
+    margin-left: 0;
+
+  }
+  to {
+    margin-left:100%;
+  }
+}
+
+.lastpage2{
+
+  animation: lastpage2 2s;
+  -moz-animation: lastpage2 2s; /* Firefox */
+  -webkit-animation: lastpage2 2s;  /* Safari 和 Chrome */
+  -o-animation: lastpage2 2s; /* Opera */
+}
+.nextpage2{
+ 
+  animation: nextpage2 2s;
+  -moz-animation: nextpage2 2s; /* Firefox */
+  -webkit-animation: nextpage2 2s;  /* Safari 和 Chrome */
+  -o-animation: nextpage2 2s; /* Opera */
+}
+
+
+.light{
+  background-position: 0 -64px;
+}
+.gray{
+  background-position: 0 0px;
+}
+.nextgray{
+ background-position: 0 -127px; 
+}
+.nextlight{
+ background-position: 0 -191px;  
+}
+.comment{
+  width: 690px;
+  margin: 0 auto;
+}
+body #pagination #prev{
+  
+    top: 50%;
+    left: 0;
+    margin-top: -100px;
+    padding: 10px 10px 10px 20px;
+    border-top-right-radius: 42px;
+    border-bottom-right-radius: 42px;
+  
+}
+body #pagination #prev .icon{
+  
+}
+body #pagination #next{
+  
+    top: 50%;
+    right: 0;
+    margin-top: -100px;
+    padding: 10px 20px 10px 10px;
+    border-top-left-radius: 42px;
+    border-bottom-left-radius: 42px;
+  
+}
+
+body #pagination #next .icon{
+  
+}
+body #pagination .v_nav{
+  position: fixed;
+  display: block;
+  width: 64px;
+  height: 64px;
+  outline: none;
+  background-image:url("http://page.zgenk.com/130819/images/body_dark_bg.png");
+  color: #6D6E71;
+  text-indent: -9999px;
+  font-weight: bold;
+  font-size: 20px;
+}
+body #pagination .v_nav .icon{
+  display: block;
+  float: left;
+  width: 64px;
+  height: 64px;
+  background-image: url("http://page.zgenk.com/130819/images/go_bg.png?123123") ;
+  background-repeat: no-repeat;
+  content: " ";
+} 
+body #nav_wrapper {
+  height: 50px;
+  background: transparent url("http://page.zgenk.com/130819/images/body_dark_bg.png") repeat-x;
+}
+body #nav_wrapper #nav {
+  height: 35px;
+  background: transparent url("http://page.zgenk.com/130819/images/nav_bg.png") repeat-x 0 0;
+}
+body #nav_wrapper #nav .inner {
+  margin: 0 auto;
+  width: 960px;
+}
+body #nav_wrapper #nav .inner #title {
+  float: left;
+  margin: 0;
+  height: 32px;
+  color: #ddd;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px black;
+  font-size: 22px;
+  font-family: "Abel", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  line-height: 32px;
+  /* 榧犳爣绉诲姩鍒伴摼鎺ヤ笂 */
+
+}
+body #nav_wrapper #nav .inner #title a {
+  color: #ddd;
+}
+body #nav_wrapper #nav .inner #title a:hover {
+  color: #ffffff;
+}
+body #nav_wrapper #nav .inner .right {
+  float: right;
+  margin-top: 10px;
+  list-style: none;
+  font-size: 11px;
+}
+body #nav_wrapper #nav .inner .right li {
+  display: block;
+  float: left;
+  color: #ccc;
+  /* 榧犳爣绉诲姩鍒伴摼鎺ヤ笂 */
+
+}
+body #nav_wrapper #nav .inner .right li a {
+  color: #ccc;
+}
+body #nav_wrapper #nav .inner .right li a:hover {
+  color: #ffffff;
+}
+body #nav_wrapper #nav .inner .right .dot {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+body .content{
+  width: 100%;
+}
+body .page {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 40px;
+  
+}
+body .page .article {
+  margin: 40px auto;
+  padding: 15px;
+  width: 660px;
+  border: 1px white solid;
+  background: #F2F2F2;
+  -webkit-box-shadow: 0 1px 10px #A8B1B9;
+  -moz-box-shadow: 0 1px 10px #A8B1B9;
+  box-shadow: 0 1px 10px #58B1B9;
+  text-shadow: 0 1px 1px white;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, "Songti SC", "SimSun", serif;
+  font-weight: 100;
+  line-height: 25px;
+  color: #2f2f2f;
+}
+body .page .article .inner {
+  padding: 20px;
+  border: 1px #F2F3F3 solid;
+  background-color: #F8F8F8;
+}
+body .page .article .inner .article_title {
+  margin: 0px;
+  text-align: center;
+}
+body .page .article .inner .title {
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.5px;
+  font-size: 30px;
+  font-family: "Abel", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  line-height: 30px;
+}
+body .page .article .inner .title a {
+  color: #444;
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+}
+body .page .article .inner .text {
+  margin: 20px 0px;
+  line-height: 20pt;
+}
+body .page .article .inner .text code{
+  background-color: #dff8dd;
+}
+body .page .article .inner .text p {
+  margin: 0 0 21px 0;
+  line-height: 20pt;
+  text-indent: 2em;
+}
+body .page .article .inner .text img {
+  display: block;
+  margin: 0 auto;
+  max-width: 570px;
+  border: 5px white solid;
+  -webkit-box-shadow: 0 1px 3px #333;
+  -moz-box-shadow: 0 1px 3px #333;
+  box-shadow: 0 1px 3px #333;
+  text-align: center;
+}
+body .page .article .inner .text ul {
+  margin: 5px 0 21px 40px;
+}
+body .page .article .inner .text ul li {
+  margin: 2px 0;
+}
+body .page .article .inner .text pre {
+  font-family: Monaco, Andale Mono, Courier New, monospace;
+  overflow-x: auto;
+  margin: 10px;
+  padding: 12px;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  background: white;
+  box-shadow: 0 1px 0 #ffffff, 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  color: black;
+  white-space: pre;
+  word-wrap: normal;
+  font: 12px/1.5 Monaco, monospace;
+}
+body .page .article .inner .text pre code {
+  text-shadow: none;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  vertical-align: baseline;
+}
+body .page .article .inner .text blockquote {
+  margin-bottom: 18px;
+  padding: 7px 7px 21px 15px;
+  font-family: "Emphasis",STKaiti,Kai,Kaiti,serif;
+  font-style: normal;
+}
+
+body .page .article .inner .big_sep {
+  display: block;
+  margin-top: 16px;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  content: " ";
+}
+body .page .article .inner .article_meta {
+  margin-bottom: 15px;
+  padding: 10px 0;
+  height: 20px;
+  color: #777;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 20px;
+}
+body .page .article .inner .article_meta span {
+  color: #AAA;
+  text-transform: lowercase;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+body .page .sep {
+  height: 5px;
+  background: transparent url("http://page.zgenk.com/130819/images/background-stripes.png") repeat-x 0 0;
+}
+body #footer_wrapper {
+  padding-top: 15px;
+  background: transparent url("http://page.zgenk.com/130819/images/body_dark_bg.png") repeat-x;
+}
+body #footer_wrapper #footer {
+  padding: 30px 0 0 0;
+  background: #333333 url("http://page.zgenk.com/130819/images/mask.png") 0 0 repeat;
+  -webkit-box-shadow: inset 0 -1px 3px #111111;
+  -moz-box-shadow: inset 0 -1px 3px #111111;
+  box-shadow: inset 0 -1px 3px #111111;
+  color: #ddd;
+  text-shadow: 0 1px 1px #111;
+}
+body #footer_wrapper #footer #footer_inner {
+  margin: 0 auto;
+  width: 960px;
+}
+body #footer_wrapper #footer #footer_inner .col {
+  float: left;
+  margin: 0 0 0 20px;
+  width: 289px;
+}
+body #footer_wrapper #footer #footer_inner .col a {
+  color: #A0927F;
+}
+body #footer_wrapper #footer #footer_inner .col .tag {
+  margin: 2px 3px;
+  padding: 2px 3px;
+  font-size: 11px;
+}
+body #footer_wrapper #footer #footer_inner .col h2 {
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Abel", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+body #footer_wrapper #footer #footer_inner .col ul {
+  list-style-type: none;
+  display: inline;
+}
+body #footer_wrapper #footer #footer_inner .col ul li {
+  display: block;
+  float: left;
+  margin: 0 20px 10px 0;
+  width: 100px;
+  height: 20px;
+}
+body #footer_wrapper #footer #footer_inner .col ul li a {
+  display: block;
+  padding-left: 10px;
+  width: 120px;
+  height: 20px;
+  font-size: 11px;
+  line-height: 20px;
+}
+body #footer_wrapper #footer #footer_inner .col ul li:after {
+  display: block;
+  border-top: 1px #2d2d2d solid;
+  border-bottom: 1px #4e4e4e solid;
+  content: " ";
+}
+body #footer_wrapper #footer #footer_inner .tag_cloud {
+  
+  word-break: break-all;
+  word-wrap: break-word;
+  line-height: 2em;
+}
+body #footer_wrapper #footer #footer_inner .copyright {
+  clear: both;
+  padding: 80px 0 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+body #footer_wrapper #footer #footer_inner .copyright span {
+  margin: 0 5px;
+}
+body #footer_wrapper #footer #footer_inner .copyright a {
+  color: #A0927F;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>816纪念日大狂欢</title>
+    <style type="text/css">
+      .menu ul{
+        border-top: 15px solid black;
+        padding: 0 0px;
+        list-style-type: none;
+        margin: 0px;
+      }
+      .menu ul li{
+        float: left;
+
+      }
+      .menu ul li a{
+        display: inline-block;
+        margin:  0 5px;
+        color: #fff;
+        height: 50px;
+        width: 65px;
+        font-size: 14px;
+        line-height: 50px;
+        padding: 10px 5px;
+        background-color: #151515;
+        border-radius: 0 0 5px 5px;
+        text-decoration: none;
+      }
+      .menu ul li.translate a{
+        background: #2EC7D2;
+      }
+      .menu ul li.translate-x a{
+        background: #8FDD21;
+      }
+       .menu ul li.translate-y a{
+        background: #F45917;
+      }
+       .menu ul li.rotate a{
+        -webkit-transform-origin:10px 10px;
+           -moz-transform-origin:10px 10px;
+            -ms-transform-origin:10px 10px;
+             -o-transform-origin:10px 10px;
+                transform-origin:10px 10px;
+        background: #D50E19;
+      }
+       .menu ul li.scale a{
+        background: #cdddf2;
+      }
+       .menu ul li.scale-x a{
+        background: #0fDD21;
+      }
+       .menu ul li.scale-y a{
+        background: #cd5917;
+      }
+       .menu ul li.skew a{
+
+        background: #519;
+      }
+      .menu ul li.skew-x a{
+        background: #D50;
+      }
+      .menu ul li.skew-y a{
+        background: #E19;
+      }
+      .menu ul li.rotate a:hover {
+          -webkit-transform: rotate(45deg);
+             -moz-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+               -o-transform: rotate(45deg);
+                  transform: rotate(45deg);
+        }
+      .menu ul li.scale a:hover {
+        -webkit-transform: scale(0.8,0.8);
+           -moz-transform: scale(0.8,0.8);
+            -ms-transform: scale(0.8,0.8);
+             -o-transform: scale(0.8,0.8);
+                transform: scale(0.8,0.8);
+      }  
+       .menu ul li.skew a:hover {
+        -webkit-transform: skew(45deg,15deg);
+           -moz-transform: skew(45deg,15deg);
+            -ms-transform: skew(45deg,15deg);
+             -o-transform: skew(45deg,15deg);
+                transform: skew(45deg,15deg);
+      }  
+
+
+
+      #timings-demo {
+     border: 1px solid #ccc;
+     padding: 10px;
+     height: 400px;
+     width: 400px;
+   }
+     
+  .demo-box {
+     width: 100px;
+     height: 50px;
+     text-align: center;
+     line-height: 50px;
+     text-align: center;
+     color: #fff;
+     background: #96c;
+     -moz-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     border-radius: 5px;
+     -moz-box-shadow: inset 0 0 5px rgba(102, 153, 0,0.5);
+     -webkit-box-shadow: inset 0 0 5px rgba(102, 153, 0,0.5);
+     box-shadow: inset 0 0 5px rgba(102, 153, 0,0.5);
+     margin-bottom: 10px;
+  }
+  /*//ease效果： */       
+  #ease {
+     -moz-transition: all 5s ease 0.3s;
+     -webkit-transition: all 5s ease 0.3s;
+     -o-transition: all 5s ease 0.3s;
+     transition: all 5s ease 0.3s;
+     background: #f36;      
+  }
+  /*//ease-in效果：*/
+  #ease-in {
+     -moz-transition: all 3s ease-in 0.5s;
+     -webkit-transition: all 3s ease-in 0.5s;
+     -o-transition: all 3s ease-in 0.5s;
+     transition: all 3s ease-in 0.5s;
+     background: #369;
+  }
+  /*//ease-out效果：*/
+  #ease-out {
+    -moz-transition: all 5s ease-out 0s;
+    -webkit-transition: all 5s ease-out 0s;
+    -o-transition: all 5s ease-out 0s;
+    transition: all 5s ease-out 0s;
+    background: #636;  
+    -webkit-transform:skew(30deg,10deg);
+          -moz-transform:skew(30deg,10deg);
+           -ms-transform:skew(30deg,10deg);
+            -o-transform:skew(30deg,10deg);
+               transform:skew(30deg,10deg);   
+  }
+  /*//ease-in-out效果：*/
+  #ease-in-out {
+    -moz-transition: all 1s ease-in-out 2s;
+    -webkit-transition: all 1s ease-in-out 2s;
+    -o-transition: all 1s ease-in-out 2s;
+    transition: all 1s ease-in-out 2s;
+    background: #3e6;
+  }
+  /*//linear效果：*/
+  #linear {
+    -moz-transition: all 6s linear 0s;
+    -webkit-transition: all 6s linear 0s;
+    -o-transition: all 6s linear 0s;
+    transition: all 6s linear 0s;
+    background: #999;
+  }
+  /*//cubic-bezier效果：*/
+  #cubic-bezier {
+    -moz-transition: all 4s cubic-bezier 1s;
+    -webkit-transition: all 4s cubic-bezier 1s;
+    -o-transition: all 4s cubic-bezier 1s;
+    transition: all 4s cubic-bezier 1s;
+    background: #6d6;
+  }
+  /*//hover状态下或单击click按钮后demo-box产生属性变化*/
+  .box-transform {
+    -moz-transform: rotate(360deg) scale(1.2);
+    -webkit-transform: rotate(360deg) scale(1.2);
+    -o-transform: rotate(360deg) scale(1.2);
+    transform: rotate(360deg) scale(1.2);
+    background: #369;
+    
+  }
+    </style> 
+  </head>
+  <body>
+    
+
+    <div class="menu">
+
+      <ul class="clearfix">
+        <li class="item translate">
+          <a href="#">Translate</a>
+        </li>
+        <li class="item translate-x">
+          <a href="#">TranslateX</a>
+        </li>
+        <li class="item translate-y">
+          <a href="#">TranslateY</a>
+        </li>
+        <li class="item rotate">
+          <a href="#">Rotate</a>
+        </li>
+        <li class="item scale">
+          <a href="#">Scale</a>
+        </li>
+        <li class="item scale-x">
+          <a href="#">ScaleX</a>
+        </li>
+        <li class="item scale-y">
+          <a href="#">ScaleY</a>
+        </li>
+        <li class="item skew">
+          <a href="#">Skew</a>
+        </li>
+        <li class="item skew-x">
+          <a href="#">SkewX</a>
+        </li>
+        <li class="item skew-y">
+          <a href="#">SkewY</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <br>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   <a id="timings-demo-btn">click</a>
+  <div id="timings-demo">
+    <div id="ease" class="demo-box">Ease</div>
+    <div id="ease-in" class="demo-box">Ease-in</div>
+    <div id="ease-out" class="demo-box">Ease-out</div>
+    <div id="ease-in-out" class="demo-box">Ease-in-out</div>
+    <div id="linear" class="demo-box">Linear</div>
+    <div id="cubic-bezier" class="demo-box">Cubic-bezier</div>
+  </div>
+  <script type="text/javascript" src="http://www.xiaomi.com/js/libs/jquery18.js"></script>
+  <script type="text/javascript">
+ $(document).ready(function(){
+     $("#timings-demo-btn").toggle(
+        function(){
+          $(this).next("div#timings-demo").children().addClass("box-transform");
+        },function(){
+          $(this).next("div#timings-demo").children().removeClass("box-transform");
+     });
+  });
+  </script>
+</body>
+
+</html>
